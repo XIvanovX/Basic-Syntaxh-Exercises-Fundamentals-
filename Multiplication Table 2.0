@@ -1,0 +1,37 @@
+using System;
+
+namespace SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            var n = int.Parse(Console.ReadLine());
+            var n2 = int.Parse(Console.ReadLine());
+
+            var countable = n2;
+
+            if (countable > 10)
+            {
+                Console.WriteLine($"{n} X {countable} = {n * countable}");
+
+            }
+
+            while (countable <=10) 
+            {
+               if(countable>10)
+                {
+                    break;
+                }
+                Console.WriteLine($"{n} X {countable} = {n * countable}");
+                countable++;
+            }
+
+           
+
+        }
+    }
+    
+}
+
