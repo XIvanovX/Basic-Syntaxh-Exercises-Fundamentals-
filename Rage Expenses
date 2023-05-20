@@ -1,0 +1,43 @@
+using System;
+using System.Globalization;
+
+namespace SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int lostGamesCount = int.Parse(Console.ReadLine());
+            double heatSetPrice = double.Parse(Console.ReadLine());
+            double mousePrice = double.Parse(Console.ReadLine());
+            double keyboardPrice = double.Parse(Console.ReadLine());
+            double displayPrice = double.Parse(Console.ReadLine());
+
+            double trashedHeadset = Math.Floor((double)lostGamesCount / 2);
+            double trashedMouse = Math.Floor((double)lostGamesCount / 3);
+            double trashedKeyboard = 0;
+
+            for(int i = 1;i<=lostGamesCount;i++)
+            {
+                if(i%2==0 && i%3==0)
+                {
+                    trashedKeyboard++;
+                }
+            }
+
+            double trashedDisplays = Math.Floor(trashedKeyboard / 2);
+
+            double totalExpenses = (trashedHeadset * heatSetPrice) + (trashedKeyboard * keyboardPrice) + (trashedDisplays * displayPrice) + (trashedMouse * mousePrice);
+
+            Console.WriteLine($"Rage expenses: {totalExpenses:f2} lv.");
+
+
+
+
+
+        }
+    }
+
+}
+
