@@ -1,0 +1,124 @@
+using System;
+using System.Globalization;
+
+namespace SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+            double currentBalance = double.Parse(Console.ReadLine());
+
+            string gameName;
+            double totalSpent = 0;
+
+            while ((gameName = Console.ReadLine()) != "Game Time")
+            {
+
+                if (currentBalance == 0)
+                {
+                    Console.WriteLine("Out of money!");
+                    break;
+                }
+                if (gameName == "RoverWatch")
+                {
+
+
+                    if (currentBalance < 29.99)
+                    {
+                        Console.WriteLine("Too Expensive");
+                        continue;
+                    }
+                    Console.WriteLine($"Bought {gameName}");
+                    totalSpent += 29.99;
+                    currentBalance -= 29.99;
+
+
+                }
+                else if (gameName == "OutFall 4")
+                {
+                    if (currentBalance < 39.99)
+                    {
+                        Console.WriteLine("Too Expensive");
+                        continue;
+                    }
+                    currentBalance -= 39.99;
+                    Console.WriteLine($"Bought {gameName}");
+                    totalSpent += 39.99;
+                }
+                else if (gameName == "CS: OG")
+                {
+                    if (currentBalance < 15.99)
+                    {
+                        Console.WriteLine("Too Expensive");
+                        continue;
+                    }
+                    currentBalance -= 15.99;
+                    Console.WriteLine($"Bought {gameName}");
+                    totalSpent += 15.99;
+                }
+                else if (gameName == "Zplinter Zell")
+                {
+                    if (currentBalance < 19.99)
+                    {
+                        Console.WriteLine("Too Expensive");
+                        continue;
+                    }
+                    currentBalance -= 19.99;
+                    Console.WriteLine($"Bought {gameName}");
+                    totalSpent += 19.99;
+                }
+                else if (gameName == "Honored 2")
+                {
+                    if (currentBalance < 59.99)
+                    {
+                        Console.WriteLine("Too Expensive");
+                        continue;
+                    }
+                    currentBalance -= 59.99;
+                    Console.WriteLine($"Bought {gameName}");
+                    totalSpent += 59.99;
+                }
+                else if (gameName == "RoverWatch Origins Edition")
+                {
+                    if (currentBalance < 39.99)
+                    {
+                        Console.WriteLine("Too Expensive");
+                        continue;
+                    }
+                    currentBalance -= 39.99;
+                    Console.WriteLine($"Bought {gameName}");
+                    totalSpent += 39.99;
+                }
+                else
+                {
+                    Console.WriteLine("Not Found");
+
+                }
+
+                if (currentBalance == 0)
+                {
+                    Console.WriteLine("Out of money!");
+                    break;
+                }
+            }
+
+            if (currentBalance > 0)
+            {
+
+                Console.WriteLine($"Total spent: ${totalSpent:f2}. Remaining: ${currentBalance:f2}");
+            }
+
+
+
+
+
+
+        }
+    }
+
+}
+
