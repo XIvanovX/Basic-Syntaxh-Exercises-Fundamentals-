@@ -1,0 +1,22 @@
+using System;
+using System.Globalization;
+
+namespace SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int input = int.Parse(Console.ReadLine());
+
+            var km = (double)input / 1000;
+
+            Console.WriteLine($"{km:f2}");
+
+
+        }
+    }
+
+}
+
