@@ -1,0 +1,63 @@
+using System;
+using System.Globalization;
+
+namespace SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+            int input = int.Parse(Console.ReadLine());
+            double number = 0;
+
+
+
+            for (int i = 1; i <= input; i++)
+            {
+                double sum = 0;
+                if (i < 10)
+                {
+                    if (i == 5 || i == 7 || i == 11)
+                    {
+                        Console.WriteLine($"{i} -> True");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{i} -> False");
+                    }
+                }
+                else if (i >=10)
+                {
+                    string n = i.ToString();
+                    char digitOne = n[0];
+                    char digittwo = n[1];
+
+                    int firstDigit = int.Parse(digitOne.ToString());
+                    int secondDigit = int.Parse(digittwo.ToString());
+
+
+
+                    sum = firstDigit + secondDigit;
+                    if (sum == 5 || sum == 7 || sum == 11)
+                    {
+                        Console.WriteLine($"{i} -> True");
+
+                    }
+                    else 
+                        {
+                        Console.WriteLine($"{i} -> False");
+                    }
+                }
+
+
+                
+                
+            }
+
+        }
+    }
+}
+
