@@ -1,0 +1,46 @@
+using System;
+using System.Globalization;
+
+namespace SoftUni
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            float winnerValue = 0;
+            string winner = string.Empty;
+
+            for(int i =1;i<=n;i++)
+            {
+                string model = Console.ReadLine();
+                float radius = float.Parse(Console.ReadLine());
+                int height = int.Parse(Console.ReadLine());
+
+                float volume = (float)(Math.PI * height * Math.Pow(radius, 2));
+                if (i == 1)
+                {
+                    winnerValue = volume;
+                    winner = model;
+
+                }
+
+                else
+                {
+                    if(volume>winnerValue)
+                    {
+                        winnerValue = volume;
+                        winner = model;
+                    }
+
+                }
+
+
+            }
+
+            Console.WriteLine(winner);
+        }
+    }
+}
+
